@@ -1,6 +1,6 @@
-import { X, ShoppingBag } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useCartStore } from '../../store/cartStore';
+import { X, ShoppingBag } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useCartStore } from "../../store/cartStore";
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -15,7 +15,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
   const handleCheckout = () => {
     alert("Checkout complete!");
-    navigate('/marketplace');
+    navigate("/marketplace");
     onClose();
   };
 
@@ -23,8 +23,11 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      
+      <div
+        className="absolute inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+      />
+
       <div className="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-xl">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b">
@@ -43,7 +46,10 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <>
               <div className="flex-grow overflow-y-auto p-4">
                 {items.map((item) => (
-                  <div key={item.id} className="flex items-center mb-4 p-2 border rounded">
+                  <div
+                    key={item.id}
+                    className="flex items-center mb-4 p-2 border rounded"
+                  >
                     <img
                       src={item.image.filePath}
                       alt={item.title}
@@ -51,7 +57,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     />
                     <div className="ml-4 flex-grow">
                       <h3 className="font-medium">{item.title}</h3>
-                      <p className="text-emerald-600">Rs. {item.price}</p>
+                      <p className="text-cyan-600">Rs. {item.price}</p>
                     </div>
                     <button
                       onClick={() => removeItem(item.id)}
@@ -70,7 +76,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 </div>
                 <button
                   onClick={handleCheckout}
-                  className="w-full bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700"
+                  className="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700"
                 >
                   Proceed to Checkout
                 </button>

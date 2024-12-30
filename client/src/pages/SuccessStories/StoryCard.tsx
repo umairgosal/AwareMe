@@ -1,4 +1,4 @@
-import type { SuccessStoryType } from '../../types';
+import type { SuccessStoryType } from "../../types";
 
 interface StoryCardProps {
   story: SuccessStoryType;
@@ -29,7 +29,9 @@ export function StoryCard({ story }: StoryCardProps) {
             />
             <div>
               <p className="font-medium">{story.entrepreneur.name}</p>
-              <p className="text-sm text-gray-500">{story.entrepreneur.business}</p>
+              <p className="text-sm text-gray-500">
+                {story.entrepreneur.business}
+              </p>
             </div>
           </div>
           <p className="text-gray-600 mb-4">{story.excerpt}</p>
@@ -37,7 +39,7 @@ export function StoryCard({ story }: StoryCardProps) {
             {story.tags.map((tag, index) => (
               <span
                 key={index}
-                className="bg-emerald-100 text-emerald-800 text-sm px-3 py-1 rounded-full"
+                className="bg-cyan-100 text-cyan-800 text-sm px-3 py-1 rounded-full"
               >
                 {tag}
               </span>

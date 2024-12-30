@@ -1,6 +1,6 @@
-import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
-import { ContactForm } from './ContactForm';
+import React from "react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 export function Contact() {
   return (
@@ -9,7 +9,8 @@ export function Contact() {
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions or suggestions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions or suggestions? We'd love to hear from you. Send us a
+            message and we'll respond as soon as possible.
           </p>
         </div>
 
@@ -18,21 +19,23 @@ export function Contact() {
             <h2 className="text-xl font-semibold mb-6">Get in Touch</h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <MapPin className="text-emerald-600 mt-1 mr-4" />
+                <MapPin className="text-cyan-600 mt-1 mr-4" />
                 <div>
                   <h3 className="font-medium">Address</h3>
-                  <p className="text-gray-600">NUST H-12, Islamabad, Pakistan</p>
+                  <p className="text-gray-600">
+                    NUST H-12, Islamabad, Pakistan
+                  </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Phone className="text-emerald-600 mt-1 mr-4" />
+                <Phone className="text-cyan-600 mt-1 mr-4" />
                 <div>
                   <h3 className="font-medium">Phone</h3>
                   <p className="text-gray-600">+92 324 9626601</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Mail className="text-emerald-600 mt-1 mr-4" />
+                <Mail className="text-cyan-600 mt-1 mr-4" />
                 <div>
                   <h3 className="font-medium">Email</h3>
                   <p className="text-gray-600">harisrehman195103@gmail.com</p>

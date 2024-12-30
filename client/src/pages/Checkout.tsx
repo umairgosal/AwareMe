@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useCartStore } from '../store/cartStore';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useCartStore } from "../store/cartStore";
 
 export function Checkout() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export function Checkout() {
     e.preventDefault();
     // Here you would typically handle the payment processing
     clearCart();
-    navigate('/marketplace');
+    navigate("/marketplace");
   };
 
   if (items.length === 0) {
@@ -20,8 +20,8 @@ export function Checkout() {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
           <button
-            onClick={() => navigate('/marketplace')}
-            className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700"
+            onClick={() => navigate("/marketplace")}
+            className="bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700"
           >
             Return to Marketplace
           </button>
@@ -48,7 +48,7 @@ export function Checkout() {
                   />
                   <div className="ml-4">
                     <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-emerald-600">Rs. {item.price}</p>
+                    <p className="text-cyan-600">Rs. {item.price}</p>
                   </div>
                 </div>
               ))}
@@ -62,44 +62,53 @@ export function Checkout() {
             <h2 className="text-xl font-semibold mb-4">Shipping Information</h2>
             <form onSubmit={handleCheckout} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Full Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   required
-                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Address
                 </label>
                 <textarea
                   id="address"
                   required
                   rows={3}
-                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Phone Number
                 </label>
                 <input
                   type="tel"
                   id="phone"
                   required
-                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+                  className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700"
+                className="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700"
               >
                 Place Order
               </button>

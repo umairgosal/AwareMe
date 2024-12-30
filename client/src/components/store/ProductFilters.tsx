@@ -1,36 +1,41 @@
-import React from 'react';
-import { Filter, ArrowUpDown, RotateCcw } from 'lucide-react';
+import React from "react";
+import { Filter, ArrowUpDown, RotateCcw } from "lucide-react";
 
 interface ProductFiltersProps {
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
   onPriceRangeChange: (range: { min: number; max: number }) => void;
   sortBy: string;
-  onSortChange: (sort: 'price-asc' | 'price-desc' | 'newest' | 'oldest') => void;
+  onSortChange: (
+    sort: "price-asc" | "price-desc" | "newest" | "oldest"
+  ) => void;
   onReset: () => void;
 }
 
-const CATEGORIES = ['All', 'Handicrafts', 'Food', 'Textiles', 'Art'];
+const CATEGORIES = ["All", "Handicrafts", "Food", "Textiles", "Art"];
 
-const SORT_OPTIONS = [ 
-  { value: 'price-asc', label: 'Price: Low to High' },
-  { value: 'price-desc', label: 'Price: High to Low' },
+const SORT_OPTIONS = [
+  { value: "price-asc", label: "Price: Low to High" },
+  { value: "price-desc", label: "Price: High to Low" },
 ];
 
 const DEFAULT_PRICE_RANGE = { min: 0, max: 10000000000 };
 
-export function ProductFilters({ 
-  selectedCategory, 
-  onCategoryChange, 
+export function ProductFilters({
+  selectedCategory,
+  onCategoryChange,
   onPriceRangeChange,
   sortBy,
   onSortChange,
-  onReset
+  onReset,
 }: ProductFiltersProps) {
   const [priceRange, setPriceRange] = React.useState(DEFAULT_PRICE_RANGE);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'min' | 'max') => {
+  const handlePriceChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    type: "min" | "max"
+  ) => {
     const value = parseInt(e.target.value) || 0;
     const newRange = { ...priceRange, [type]: value };
     setPriceRange(newRange);
@@ -59,7 +64,7 @@ export function ProductFilters({
             <h3 className="font-semibold">Filters & Sort</h3>
             <button
               onClick={handleReset}
-              className="flex items-center text-sm text-emerald-600 hover:text-emerald-700"
+              className="flex items-center text-sm text-cyan-600 hover:text-cyan-700"
             >
               <RotateCcw size={14} className="mr-1" />
               Reset All
@@ -73,7 +78,7 @@ export function ProductFilters({
               Sort By
             </h3>
             <div className="space-y-2">
-              {SORT_OPTIONS.map(option => (
+              {SORT_OPTIONS.map((option) => (
                 <label key={option.value} className="flex items-center">
                   <input
                     type="radio"
@@ -93,7 +98,7 @@ export function ProductFilters({
           <div className="mb-6">
             <h3 className="font-semibold mb-2">Category</h3>
             <div className="space-y-2">
-              {CATEGORIES.map(category => (
+              {CATEGORIES.map((category) => (
                 <label key={category} className="flex items-center">
                   <input
                     type="radio"
@@ -118,7 +123,7 @@ export function ProductFilters({
                 <input
                   type="number"
                   value={priceRange.min}
-                  onChange={(e) => handlePriceChange(e, 'min')}
+                  onChange={(e) => handlePriceChange(e, "min")}
                   className="w-full mt-1 p-2 border rounded"
                 />
               </div>
@@ -127,7 +132,7 @@ export function ProductFilters({
                 <input
                   type="number"
                   value={priceRange.max}
-                  onChange={(e) => handlePriceChange(e, 'max')}
+                  onChange={(e) => handlePriceChange(e, "max")}
                   className="w-full mt-1 p-2 border rounded"
                 />
               </div>

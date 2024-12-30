@@ -1,4 +1,4 @@
-import type { BlogPostType } from '../../types';
+import type { BlogPostType } from "../../types";
 
 interface BlogPostProps {
   post: BlogPostType;
@@ -14,7 +14,7 @@ export function BlogPost({ post }: BlogPostProps) {
       />
       <div className="p-6">
         <div className="flex items-center mb-4">
-          <span className="text-sm text-emerald-600">{post.category}</span>
+          <span className="text-sm text-cyan-600">{post.category}</span>
           <span className="mx-2 text-gray-300">•</span>
           <span className="text-sm text-gray-500">{post.date}</span>
         </div>

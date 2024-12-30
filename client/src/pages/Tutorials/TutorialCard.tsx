@@ -1,5 +1,5 @@
-import { BookOpen, Clock } from 'lucide-react';
-import type { TutorialType } from '../../types';
+import { BookOpen, Clock } from "lucide-react";
+import type { TutorialType } from "../../types";
 
 interface TutorialCardProps {
   tutorial: TutorialType;
@@ -15,7 +15,7 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
       />
       <div className="p-6">
         <div className="flex items-center mb-4">
-          <span className="bg-emerald-100 text-emerald-800 text-sm px-3 py-1 rounded-full">
+          <span className="bg-cyan-100 text-cyan-800 text-sm px-3 py-1 rounded-full">
             {tutorial.category}
           </span>
         </div>

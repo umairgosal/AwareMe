@@ -1,37 +1,41 @@
-import type { TeamMemberType } from '../../types';
-import { Mission } from './Mission';
-import { TeamMember } from './TeamMember';
+import type { TeamMemberType } from "../../types";
+import { Mission } from "./Mission";
+import { TeamMember } from "./TeamMember";
 
 export function About() {
   const team: TeamMemberType[] = [
     {
-      name: 'Haris Rehman',
-      role: 'Founder & CEO',
-      description: 'Passionate about empowering rural women through technology',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHFCzdNAWKkOw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1726953021890?e=1739404800&v=beta&t=faTBejL_2VZ7xZax_T5au2ti22FFTV3aCw-HWxcdBkA'
+      name: "Farzan Saqib",
+      role: "Founder & CEO",
+      description: "Passionate about empowering rural women through technology",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gv6VVdtAGLqBK9MXIBOUGJ-hWeVdiiN-3Q&s",
     },
     {
-      name: 'Aima Sibtain',
-      role: 'Director',
-      description: 'Expert in building and nurturing entrepreneurial communities',
-      image: 'https://th.bing.com/th/id/OIP.CjW4KuMskKzlsS14Ek4YDQHaHa?rs=1&pid=ImgDetMain'
+      name: "Ch Muhammad Umair Gosal",
+      role: "Director",
+      description:
+        "Expert in building and nurturing entrepreneurial communities",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gv6VVdtAGLqBK9MXIBOUGJ-hWeVdiiN-3Q&s",
     },
     {
-      name: 'Muhammad Sulleman',
-      role: 'Technology Lead',
-      description: 'Dedicated to making technology accessible to all',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHfQunIzV_S8A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1685737190556?e=1739404800&v=beta&t=5vV1oanGf8q2CEXILblMtUfNNiPr6LmGmPHjPMDCx5c'
-    }
+      name: "Haroon Tahir",
+      role: "Technology Lead",
+      description: "Dedicated to making technology accessible to all",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gv6VVdtAGLqBK9MXIBOUGJ-hWeVdiiN-3Q&s",
+    },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-emerald-700 text-white py-20">
+      <section className="bg-cyan-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About RuralRise</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About AwareMe</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Empowering rural women entrepreneurs through technology, community, and support
+            Women Empowerment through Awareness
           </p>
         </div>
       </section>
@@ -45,13 +49,32 @@ export function About() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Our Story</h2>
             <p className="text-gray-600 mb-6">
-              RuralRise began with a simple observation: talented women entrepreneurs in rural areas faced significant barriers to growing their businesses. Limited access to markets, technology, and business networks held back their potential.
+              AwareMe began with a mission to empower women entrepreneurs in
+              rural communities who face systemic challenges in growing their
+              businesses. These talented individuals often encounter limited
+              access to markets, technology, and resources, which curbs their
+              ability to thrive.
             </p>
             <p className="text-gray-600 mb-6">
-              Founded in 2024, we set out to bridge these gaps by creating a platform that combines e-commerce capabilities with educational resources and mentorship opportunities. Our goal is to empower rural women entrepreneurs to reach their full potential.
+              Today, AwareMe empowers women entrepreneurs across Pakistan,
+              giving them the tools they need to succeed while educating urban
+              audiences about the social challenges they face. Together, we’re
+              building a future where rural women have the agency to shape their
+              destinies and contribute meaningfully to their local economies.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Founded in 2024, AwareMe is more than just a platform—it’s a
+              movement to bridge these gaps. By providing e-commerce
+              opportunities, vocational training, and mentorship, we enable
+              rural women to connect with urban audiences, enhance their skills,
+              and build sustainable livelihoods.
             </p>
             <p className="text-gray-600">
-              Today, RuralRise serves thousands of entrepreneurs across Pakistan, helping them build successful businesses and contribute to their local economies.
+              Our platform fosters collaboration by bringing together NGOs,
+              local mentors, and communities to support these entrepreneurs.
+              Whether it’s hosting bespoke online stores, delivering impactful
+              training programs, or facilitating direct communication between
+              stakeholders, AwareMe is committed to creating lasting change.
             </p>
           </div>
         </div>

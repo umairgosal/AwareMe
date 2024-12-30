@@ -12,19 +12,19 @@ interface DesktopNavProps {
 export function DesktopNav({ user, onLogout }: DesktopNavProps) {
   return (
     <div className="hidden md:flex items-center space-x-6">
-      <Link to="/dashboard" className="flex items-center space-x-1 hover:text-emerald-200">
+      <Link to="/Home" className="flex items-center space-x-1 hover:text-cyan-200">
         <Home size={18} />
-        <span>Dashboard</span>
+        <span>Home</span>
       </Link>
-      <Link to="/marketplace" className="flex items-center space-x-1 hover:text-emerald-200">
+      <Link to="/marketplace" className="flex items-center space-x-1 hover:text-cyan-200">
         <ShoppingBag size={18} />
         <span>Marketplace</span>
       </Link>
-      <Link to="/learn" className="flex items-center space-x-1 hover:text-emerald-200">
+      <Link to="/learn" className="flex items-center space-x-1 hover:text-cyan-200">
         <BookOpen size={18} />
         <span>Learn</span>
       </Link>
-      <Link to="/community" className="flex items-center space-x-1 hover:text-emerald-200">
+      <Link to="/community" className="flex items-center space-x-1 hover:text-cyan-200">
         <Users size={18} />
         <span>Community</span>
       </Link>

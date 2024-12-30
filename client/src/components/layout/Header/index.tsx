@@ -17,7 +17,7 @@ export function Header() {
   };
 
   return (
-    <header className="bg-emerald-700 text-white">
+    <header className="bg-cyan-600 text-white">
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-bold">RuralRise</Link>

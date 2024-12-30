@@ -10,12 +10,12 @@ interface UserMenuProps {
 export function UserMenu({ user, onLogout }: UserMenuProps) {
   return (
     <div className="flex items-center space-x-4">
-      <span className="text-emerald-200">
+      <span className="text-cyan-200">
         Welcome, {user.name}
       </span>
       <button
         onClick={onLogout}
-        className="flex items-center space-x-1 hover:text-emerald-200"
+        className="flex items-center space-x-1 hover:text-cyan-200"
       >
         <LogOut size={18} />
         <span>Logout</span>

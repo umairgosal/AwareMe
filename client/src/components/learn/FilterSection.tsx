@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface FilterSectionProps {
   title: string;
@@ -7,9 +7,14 @@ interface FilterSectionProps {
   onChange: (value: string) => void;
 }
 
-export function FilterSection({ title, options, selectedValues, onChange }: FilterSectionProps) {
+export function FilterSection({
+  title,
+  options,
+  selectedValues,
+  onChange,
+}: FilterSectionProps) {
   return (
-    <div className="p-6 bg-emerald-50 rounded-lg">
+    <div className="p-6 bg-cyan-50 rounded-lg">
       <h2 className="text-xl font-semibold mb-4">{title}</h2>
       <div className="space-y-2">
         {options.map(({ value, label }) => (
@@ -18,7 +23,7 @@ export function FilterSection({ title, options, selectedValues, onChange }: Filt
               type="checkbox"
               checked={selectedValues.includes(value)}
               onChange={() => onChange(value)}
-              className="form-checkbox text-emerald-600"
+              className="form-checkbox text-cyan-600"
             />
             <span className="ml-2">{label}</span>
           </label>
