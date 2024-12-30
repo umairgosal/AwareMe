@@ -1,97 +1,70 @@
-import { ArrowRight, ShoppingBag, Star, User, Users } from "lucide-react";
+import { ArrowRight, ShoppingBag, Star, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
 import { useAuthStore } from "../store/authStore";
 
 export function Home() {
   const { user } = useAuthStore();
   const cardData = [
     {
-      icon: <ShoppingBag className="mx-auto mb-4 text-cyan-600" size={32} />,
+      icon: <ShoppingBag className="text-cyan-600" size={40} />,
       title: "Online Marketplace",
       description:
-        "Sell your products to customers across Pakistan through our easy-to-use platform",
+        "Sell your products to customers across Pakistan through our easy-to-use platform.",
     },
     {
-      icon: <Star className="mx-auto mb-4 text-cyan-600" size={32} />,
+      icon: <Star className="text-cyan-600" size={40} />,
       title: "Skill Development",
       description:
-        "Access training resources and workshops to enhance your business skills",
+        "Access training resources and workshops to enhance your business skills.",
     },
     {
-      icon: <Users className="mx-auto mb-4 text-cyan-600" size={32} />,
+      icon: <Users className="text-cyan-600" size={40} />,
       title: "Mentorship",
       description:
-        "Connect with experienced mentors who can guide you on your entrepreneurial journey",
+        "Connect with experienced mentors who can guide you on your entrepreneurial journey.",
     },
     {
-      icon: <Star className="mx-auto mb-4 text-cyan-600" size={32} />,
-      title: "Connect With NGO's (Coming Soon)",
+      icon: <Star className="text-cyan-600" size={40} />,
+      title: "Connect With NGOs",
       description:
-        "Access training resources and workshops to enhance your business skills",
+        "Access training resources and workshops to enhance your business skills.",
     },
   ];
 
   return (
-    <div className="space-y-16 py-8">
+    <div className="space-y-16">
       {/* Hero Section */}
-      <section
-        className="relative bg-cyan-700 text-white py-16"
-        style={{
-          backgroundImage:
-            "url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhka4Xb636Y-t-u0YVkA7kxG9p0QjRyYfQ4Rf6X_xts7WAgdCRvURpKItM1S6-qpGJMJN8Q3HWYXziAPD8jp_qyMiK0rXnd_EsOIgwCAUwT0DeWDb296aHJz1nDKAmjOs5moZHKia72OYTz/s320/290x230-Pakistani-women.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
-        {/* Semi-transparent overlay */}
-        <div className="font-bold text-3xl flex justify-center text-white mb-6">
-          Welcome {user.name}
-        </div>
-        <div className="container mx-auto px-4 relative z-10 justify-center flex text-center">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Women Empowerment through Awareness
-            </h1>
-            <p className="text-xl mb-8">
-              Learn how to connect with the World to impact Globally
-            </p>
-            <Link
-              to="/marketplace"
-              className="inline-flex items-center bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold transform transition-transform hover:scale-105 hover:shadow-lg"
-            >
-              Get Started
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
-          </div>
+      <section className="relative bg-gradient-to-r from-cyan-700 to-cyan-500 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold mb-6">Welcome {user.name}</h1>
+          <p className="text-lg mb-8">
+            Empowering women to connect globally and achieve their dreams.
+          </p>
+          <Link
+            to="/store"
+            className="inline-flex items-center px-6 py-3 bg-white text-cyan-600 rounded-lg font-semibold shadow-md hover:shadow-lg transition"
+          >
+            Get Started
+            <ArrowRight className="ml-2" />
+          </Link>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          How We Help You Succeed
-        </h2>
-
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-        >
+        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {cardData.map((card, index) => (
-            <SwiperSlide key={index}>
-              <div className="text-center p-6 rounded-lg bg-cyan-50 transform transition-transform hover:scale-101 hover:shadow-lg">
-                {card.icon}
-                <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
-                <p className="text-gray-600">{card.description}</p>
-              </div>
-            </SwiperSlide>
+            <div
+              key={index}
+              className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            >
+              <div className="mb-4">{card.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+              <p className="text-gray-600">{card.description}</p>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </section>
 
       {/* Success Stories */}
@@ -101,49 +74,45 @@ export function Home() {
             Success Stories
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {/* First Success Story */}
-            <div className="bg-white p-6 rounded-lg shadow-sm transform transition-transform hover:scale-105 hover:shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
               <img
-                src="https://th.bing.com/th/id/OIP.IUOLzL6DEMeEyhYzE-MRRAHaFj?rs=1&pid=ImgDetMain"
-                alt="Fatima's Handicraft Business"
+                src="https://i.dawn.com/primary/2015/06/559252b01854f.jpg?r=2012808894"
+                alt="Sidra Qasim"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">
-                From Local Artisan to Online Success
+                Markhor is a startup you should know about
               </h3>
               <p className="text-gray-600">
-                How Divya transformed her traditional handicraft business into a
-                thriving online enterprise.
+                Shoes, crafted from leather by hand, are being produced in Okara
+                and picked up all around the world.
               </p>
               <a
-                href="https://yourstory.com/people/divya-mallick"
+                href="https://www.dawn.com/news/1191423#:~:text=This%20remarkable%20export%20activity%20is,for%20its%20products%20beyond%20Pakistan."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-600 font-semibold hover:underline mt-2 block"
+                className="text-cyan-600 font-semibold hover:underline"
               >
                 Read Full Story
               </a>
             </div>
 
-            {/* Second Success Story */}
-            <div className="bg-white p-6 rounded-lg shadow-sm transform transition-transform hover:scale-105 hover:shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
               <img
-                src="https://images.yourstory.com/cs/2/b094ec506da611eab285b7ee8106293d/Maavni-1632397419896.jpg?fm=png&auto=format&blur=500"
-                alt="Promoting Odisha handicrafts and empowering artisans"
+                src="https://www.veon.com/fileadmin/user_upload/newsroom/stories/ShakeelasStory_Banner.png"
+                alt="Shakeela's Story"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">
-                Promoting Odisha Handicrafts and Empowering Artisans
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">Shakeela's Story</h3>
               <p className="text-gray-600">
-                It offers personalised products online, ensuring a consistent
-                income for artisans.
+                Growing up in Pakistan, Shakeela Bibi - like millions of young
+                girls around the world - was
               </p>
               <a
-                href="https://yourstory.com/2021/09/startup-bharat-bhubaneswar-based-ecommerce-startup"
+                href="https://www.veon.com/newsroom/stories/shakeelas-story"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-600 font-semibold hover:underline mt-2 block"
+                className="text-cyan-600 font-semibold hover:underline"
               >
                 Read Full Story
               </a>
